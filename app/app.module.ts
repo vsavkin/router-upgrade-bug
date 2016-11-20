@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { UpgradeModule } from '@angular/upgrade/static';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -13,6 +14,7 @@ import { PhoneListComponent }   from './phone-list/phone-list.component';
 @NgModule({
   imports: [
     BrowserModule,
+    UpgradeModule,
     FormsModule,
     HttpModule,
     AppRoutingModule
@@ -29,3 +31,11 @@ import { PhoneListComponent }   from './phone-list/phone-list.component';
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}
+
+declare var angular: angular.IAngularStatic;
+
+angular.module('phonecatApp', [
+  'ngAnimate',
+  'ngRoute'
+]);
+
