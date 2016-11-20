@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'my-app',
-    template: `<h1>Hello Angular</h1>`
+  selector: 'phonecat-app',
+  template: '<router-outlet></router-outlet>'
 })
 export class AppComponent { }
